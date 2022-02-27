@@ -15,11 +15,12 @@ Including another URLconf
 """
 import os
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from dotenv import load_dotenv
 
 load_dotenv()
 
 urlpatterns = [
     path(os.getenv('ADMIN_URL'), admin.site.urls),
+    path('', include('blog.urls')),
 ]
