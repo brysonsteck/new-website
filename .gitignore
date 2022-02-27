@@ -6,4 +6,4 @@ __pycache__
 *.zip
 *.bak
 db.sqlite3
-
+.env
