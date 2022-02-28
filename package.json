@@ -1,0 +1,9 @@
+{
+  "name": "prettier-config-example",
+  "scripts": {
+    "format": "prettier --write 'blog/templates/blog/*.html'"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
