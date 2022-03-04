@@ -29,11 +29,10 @@
 
           {% if latest_blogs %} {% for post in latest_blogs %}
           <h1>
-            <a href="post/{{ post.id }}/">{{ post.title }}</a> ({{
-            post.comments_set.count }} comments)
+            <a href="post/{{ post.id }}/">{{ post.title }}</a>
           </h1>
           <h4>Written by {{ post.author }} on {{ post.posted}}</h4>
-          <p>{{ post.content|truncatewords:100 }}</p>
+          <p>{{ post.text_rendered | safe |truncatewords:100 }}</p>
           <hr />
           {% endfor %} {% else %}
           <h1>There are no recent blog posts.</h1>
