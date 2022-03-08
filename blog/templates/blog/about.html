@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="{% static 'blog/bootstrap.css' %}"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>About me - Bryson Steck</title>
+  </head>
+
+  <body class="view">
+    <div class="jumbotron p-4 text-white bg-primary text-left">
+      <h2>Bryson Steck's Blog Archive</h2>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4 p-4">
+          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/obama.jpg' %}">
+          <h4>Links</h4>
+          <a href="../"><button type="button" class="mt-1 mb-1 btn btn-primary w-100">Blog</button></a>
+          <button type="button" class="mt-1 mb-1 btn btn-outline-success w-100">About Me</button>
+          <button type="button" class="mt-1 mb-1 btn btn-warning w-100">Projects</button>
+        </div>
+        <div class="col-sm-8">
+          <a href="../../"><button type="button" class="mb-3 btn btn-dark">Return to Home Page</button></a>
+          <p>Welcome! It is currently {{current_datetime}}</p>
+          
+          <h1>About me</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
