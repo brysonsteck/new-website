@@ -23,4 +23,5 @@ load_dotenv()
 urlpatterns = [
     path(os.getenv('ADMIN_URL'), admin.site.urls),
     path('', include('blog.urls')),
+    path('about/', include('about.urls')),
 ]
