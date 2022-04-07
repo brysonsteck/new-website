@@ -40,19 +40,20 @@
           {% endfor %} {% else %}
           <h1>There are no recent blog posts.</h1>
           {% endif %}
-
+          {% if latest_blogs %}
           <h3>Can't find what you're looking for?</h3>
           <p>
             This page is only showing the most recent blog posts. You can view
             all the blog posts in the <a href="archive">archive.</a>
           </p>
+          {% endif %}
         </div>
         <div class="col-sm-3 p-4">
           <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
           <h4><br />Bryson Steck</h4>
-          <button type="button" class="mt-1 mb-1 btn btn-primary disabled w-100">Blog</button>
+          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100">Blog</button></a>
           <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100">About Me</button></a>
-          <a href="/about/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100">Projects</button></a>
+          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100">Projects</button></a>
         </div>
       </div>
     </div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="{% static 'blog/bootstrap.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'projects/main.css' %}"
+      type="text/css"
+    />
+    <title>Bryson Steck</title>
+  </head>
+
+  <body class="view bg-dark text-light">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-9">
+          <p>Welcome! It is currently {{ current_datetime }}</p>
+          <h1>Current Projects</h1>
+          <p>Below are projects I currently work on in my free time.</p>
+          <div class="row">
+          {% if projects %} {% for project in projects %} {% if project.current %}
+            <div class="col-sm-6">
+              <a class="text-decoration-none" href="/projects/{{ project.title }}">
+              <div class="rounded-3 p-3 mb-4 project-background text-white-50">
+                <h2 class="text-white">{{ project.title }}</h2>
+                <p>{{ project.overview }}</p>
+              </div>
+              </a>
+            </div>
+          {% endif %} {% endfor %} {% endif %}
+          </div>
+          <h1>Past Projects</h1>
+          <p>Below are projects I have worked on in the past and no longer maintain for various reasons. (Reasons are provided in each project.)</p>
+        </div>
+        <div class="col-sm-3 p-4">
+          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
+          <h4><br />Bryson Steck</h4>
+          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100">Blog</button></a>
+          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100">About Me</button></a>
+          <button type="button" class="mt-1 mb-1 btn btn-warning w-100">Projects</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
