@@ -30,3 +30,7 @@ def post(request, blog_id):
 def about(request):
     current_datetime = datetime.datetime.now()
     return render(request, 'blog/about.html', {'current_datetime': current_datetime})
+
+def contact(request):
+    current_datetime = datetime.datetime.now()
+    return render(request, 'blog/contact.html', {'current_datetime': current_datetime})

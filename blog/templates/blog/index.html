@@ -14,6 +14,12 @@
       href="{% static 'blog/main.css' %}"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="{% static 'blog/fontawesome/css/all.css' %}"
+      type="text/css"
+    />
+    <script src="{% static 'blog/time.js' %}"></script>
     <title>Bryson Steck</title>
   </head>
 
@@ -21,7 +27,7 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-9">
-          <p>Welcome! It is currently {{current_datetime}}</p>
+          <p>Welcome! It is currently <span id="time"></span> on <span id="date"></span></p>
           {% if latest_blogs %} {% for post in latest_blogs %}
           <a class="text-decoration-none" href="post/{{ post.id }}/">
           <div class="rounded-3 p-3 mb-4 blog-background text-white-50">
@@ -51,9 +57,15 @@
         <div class="col-sm-3 p-4">
           <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
           <h4><br />Bryson Steck</h4>
-          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100">Blog</button></a>
-          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100">About Me</button></a>
-          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100">Projects</button></a>
+          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100"><i class="fa-solid fa-address-book"></i>&ensp;Blog</button></a>
+          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100"><i class="fa-solid fa-user"></i>&ensp;About Me</button></a>
+          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100 text-white"><i class="fa-solid fa-code"></i>&ensp;Projects</button></a>
+          <a href="/contact"><button type="button" class="mt-1 mb-1 btn btn-danger w-100"><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact</button></a>
+          <div class="row mt-3">
+            <a class="col-2 text-light" href="https://github.com/brysonsteck"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a class="col-2 text-light" href="https://www.linkedin.com/in/brysonsteck/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a class="col-2 text-light" href="https://play.google.com/store/apps/dev?id=8697902497679037997&hl=en_US&gl=US"><i class="fa-brands fa-google-play fa-xl"></i></a>
+          </div>
         </div>
       </div>
     </div>
