@@ -4,11 +4,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'blog/bootstrap.css' %}" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="{% static 'blog/bootstrap.css' %}"
+      type="text/css"
+    />
     {% if post %}
-      <title>Post #{{ post.id }} - {{ post.title }}</title>
+    <title>Post #{{ post.id }} - {{ post.title }}</title>
     {% else %}
-      <title>Unknown Blog Post</title>
+    <title>Unknown Blog Post</title>
     {% endif %}
     <link
       rel="stylesheet"
@@ -23,26 +27,51 @@
       <div class="row">
         <div class="col-sm-8">
           <p>Welcome! It is currently {{current_datetime}} (MST)</p>
-          <a href="../../"><button type="button" class="mb-3 btn btn-dark">Return to Home Page</button></a>
+          <a href="../../"
+            ><button type="button" class="mb-3 btn btn-dark">
+              Return to Home Page
+            </button></a
+          >
           {% if post %}
-            <h2>{{ post.title }}</h2>
-            <p>Written by {{ post.author }} on {{ post.posted }}</p>
-            <hr />
-            <p>{{ post.text_rendered | safe }}</p>
+          <h2>{{ post.title }}</h2>
+          <p>Written by {{ post.author }} on {{ post.posted }}</p>
+          <hr />
+          <p>{{ post.text_rendered | safe }}</p>
           {% else %}
-            <h1>This post does not exist</h1>
+          <h1>This post does not exist</h1>
           {% endif %}
         </div>
         <div class="col-sm-4 p-4">
-          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/obama.jpg' %}">
+          <img
+            class="rounded-circle img-fluid img-circle"
+            src="{% static 'blog/obama.jpg' %}"
+          />
           <h4><br />Bryson Steck</h4>
-          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100"><i class="fa-solid fa-address-book"></i>&ensp;Blog</button></a>
-          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100"><i class="fa-solid fa-user"></i>&ensp;About Me</button></a>
-          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100 text-white"><i class="fa-solid fa-code"></i>&ensp;Projects</button></a>
-          <a href="/contact"><button type="button" class="mt-1 mb-1 btn btn-danger w-100"><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact</button></a>
+          <a href="/"
+            ><button type="button" class="mt-1 mb-1 btn btn-primary w-100">
+              <i class="fa-solid fa-address-book"></i>&ensp;Blog
+            </button></a
+          >
+          <a href="/about"
+            ><button type="button" class="mt-1 mb-1 btn btn-success w-100">
+              <i class="fa-solid fa-user"></i>&ensp;About Me
+            </button></a
+          >
+          <a href="/projects"
+            ><button
+              type="button"
+              class="mt-1 mb-1 btn btn-warning w-100 text-white"
+            >
+              <i class="fa-solid fa-code"></i>&ensp;Projects
+            </button></a
+          >
+          <a href="/contact"
+            ><button type="button" class="mt-1 mb-1 btn btn-danger w-100">
+              <i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact
+            </button></a
+          >
         </div>
-      </div> 
+      </div>
     </div>
   </body>
 </html>
-			

@@ -22,31 +22,59 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-9">
-          <a href="../../"><button type="button" class="mb-3 btn btn-dark">Return to Home Page</button></a>
+          <a href="../../"
+            ><button type="button" class="mb-3 btn btn-dark">
+              Return to Home Page
+            </button></a
+          >
           <p>Welcome! It is currently {{current_datetime}} (MST)</p>
 
           {% if all_blogs %} {% for post in all_blogs %}
           <a class="text-decoration-none" href="../post/{{ post.id }}/">
-          <div class="rounded-3 p-3 mb-4 bg-primary bg-gradient border-primary text-white-50">
-          <h2 class="text-white">
-              {{ post.title }}
-          </h2>
-          <h5>Written by {{ post.author }} on {{ post.posted }}</h5>
-          <hr />
-          <p>{{ post.text_rendered | safe | truncatewords:100 }}</p>
-          </div>
+            <div
+              class="rounded-3 p-3 mb-4 bg-primary bg-gradient border-primary text-white-50"
+            >
+              <h2 class="text-white">
+                {{ post.title }}
+              </h2>
+              <h5>Written by {{ post.author }} on {{ post.posted }}</h5>
+              <hr />
+              <p>{{ post.text_rendered | safe | truncatewords:100 }}</p>
+            </div>
           </a>
           {% endfor %} {% else %}
           <h1>There are no recent blog posts.</h1>
           {% endif %}
         </div>
         <div class="col-sm-3 p-4">
-          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
+          <img
+            class="rounded-circle img-fluid img-circle"
+            src="{% static 'blog/bryson.jpg' %}"
+          />
           <h4><br />Bryson Steck</h4>
-          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-primary w-100"><i class="fa-solid fa-address-book"></i>&ensp;Blog</button></a>
-          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-success w-100"><i class="fa-solid fa-user"></i>&ensp;About Me</button></a>
-          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-warning w-100 text-white"><i class="fa-solid fa-code"></i>&ensp;Projects</button></a>
-          <a href="/contact"><button type="button" class="mt-1 mb-1 btn btn-danger w-100"><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact</button></a>
+          <a href="/"
+            ><button type="button" class="mt-1 mb-1 btn btn-primary w-100">
+              <i class="fa-solid fa-address-book"></i>&ensp;Blog
+            </button></a
+          >
+          <a href="/about"
+            ><button type="button" class="mt-1 mb-1 btn btn-success w-100">
+              <i class="fa-solid fa-user"></i>&ensp;About Me
+            </button></a
+          >
+          <a href="/projects"
+            ><button
+              type="button"
+              class="mt-1 mb-1 btn btn-warning w-100 text-white"
+            >
+              <i class="fa-solid fa-code"></i>&ensp;Projects
+            </button></a
+          >
+          <a href="/contact"
+            ><button type="button" class="mt-1 mb-1 btn btn-danger w-100">
+              <i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact
+            </button></a
+          >
         </div>
       </div>
     </div>
