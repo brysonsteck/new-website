@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="{% static 'blog/bootstrap.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'projects/main.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesomefree/css/all.css' %}"
+      type="text/css"
+    />
+    <script src="{% static 'blog/time.js' %}"></script>
+    <title>My Projects | Bryson Steck</title>
+  </head>
+
+  <body class="view website-background text-light">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1>404</h1>
+        </div>
+        <div class="col-sm-3 p-4">
+          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
+          <h4><br />Bryson Steck</h4>
+          <a href="/"><button type="button" class="mt-1 mb-1 btn btn-blue w-100"><i class="fa-solid fa-address-book"></i>&ensp;Blog</button></a>
+          <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-green w-100"><i class="fa-solid fa-user"></i>&ensp;About Me</button></a>
+          <a href="/projects"><button type="button" class="mt-1 mb-1 btn btn-yellow w-100"><i class="fa-solid fa-code"></i>&ensp;Projects</button></a>
+          <a href="/contact"><button type="button" class="mt-1 mb-1 btn btn-red w-100"><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact</button></a>
+          <div class="row mt-3">
+            <a class="col-2" href="https://github.com/brysonsteck"
+              ><i class="fa-brands fa-github fa-2xl"></i
+            ></a>
+            <a
+              class="col-2"
+              href="https://www.linkedin.com/in/brysonsteck/"
+              ><i class="fa-brands fa-linkedin fa-2xl"></i
+            ></a>
+            <a
+              class="col-2"
+              href="https://play.google.com/store/apps/dev?id=8697902497679037997&hl=en_US&gl=US"
+              ><i class="fa-brands fa-google-play fa-xl"></i
+            ></a>
+          </div>
+          <p class="disclaimer"><br />&copy; Bryson Steck 2021-2022</p>
+          <p class="disclaimer">Free and open source software under the MIT License.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
