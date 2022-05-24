@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+div {
+  color: #ebdbb2;
+}
+
+a, a:hover, a:visited {
+  color: #ebdbb2;
+}
+
+code {
+  font-family: "JetBrains Mono";
+}
+
+.btn-blue {
+  background-color: #458588;
+  color: #ebdbb2;
+}
+
+.btn-green {
+  background-color: #79740e;
+  color: #ebdbb2;
+}
+
+.btn-yellow {
+  background-color: #d79921;
+  color: #ebdbb2;
+}
+
+.btn-red {
+  background-color: #d65d0e;
+  color: #ebdbb2;
+}
+
+.website-background {
+  background-color: #282828;
+}
+
 .blog-background {
-  background-color: #323335;
+  background-color: #3c3836;
+}
+
+.new-badge-red {
+  background-color: #fb4934;
+}
+
+.blog h2 {
+  color: #ebdbb2;
+}
+
+.blog h5, p {
+  color: #a89984;
+}
+
+.disclaimer {
+  color: #665c54;
 }

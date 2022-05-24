@@ -34,3 +34,10 @@ def about(request):
 def contact(request):
     current_datetime = datetime.datetime.now()
     return render(request, 'blog/contact.html', {'current_datetime': current_datetime})
+
+def teapot(request):
+    # return http code 418
+    return HttpResponse('<h1>I\'m a teapot</h1>', status=418)
+
+def handler404(request, exception):
+    return render(request, 'blog/404.html', {'exception': exception}, status=404)

@@ -23,7 +23,7 @@
     <title>Bryson Steck</title>
   </head>
 
-  <body class="view bg-dark text-light">
+  <body class="view website-background text-light">
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-9">
@@ -33,11 +33,13 @@
           </p>
           {% if latest_blogs %} {% for post in latest_blogs %}
           <a class="text-decoration-none" href="post/{{ post.id }}/">
-            <div class="rounded-3 p-3 mb-4 blog-background text-white-50">
-              <h2 class="text-white">
+            <div class="rounded-3 p-3 pb-1 mb-4 blog-background blog">
+              <h2>
                 {% if recent_id == post.id %}
-                <span class="badge bg-danger">NEW!</span> {{ post.title }} {%
-                else %} {{ post.title }} {% endif %}
+                  <span class="badge new-badge-red">NEW!</span> {{ post.title }} 
+                {% else %}
+                  {{ post.title }}
+                {% endif %}
               </h2>
               <h5>Written by {{ post.author }} on {{ post.posted }}</h5>
               <hr />
@@ -61,43 +63,45 @@
           />
           <h4><br />Bryson Steck</h4>
           <a href="/"
-            ><button type="button" class="mt-1 mb-1 btn btn-primary w-100">
+            ><button type="button" class="mt-1 mb-1 btn btn-blue w-100">
               <i class="fa-solid fa-address-book"></i>&ensp;Blog
             </button></a
           >
           <a href="/about"
-            ><button type="button" class="mt-1 mb-1 btn btn-success w-100">
+            ><button type="button" class="mt-1 mb-1 btn btn-green w-100">
               <i class="fa-solid fa-user"></i>&ensp;About Me
             </button></a
           >
           <a href="/projects"
             ><button
               type="button"
-              class="mt-1 mb-1 btn btn-warning w-100 text-white"
+              class="mt-1 mb-1 btn btn-yellow w-100"
             >
               <i class="fa-solid fa-code"></i>&ensp;Projects
             </button></a
           >
           <a href="/contact"
-            ><button type="button" class="mt-1 mb-1 btn btn-danger w-100">
+            ><button type="button" class="mt-1 mb-1 btn btn-red w-100">
               <i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact
             </button></a
           >
           <div class="row mt-3">
-            <a class="col-2 text-light" href="https://github.com/brysonsteck"
+            <a class="col-2" href="https://github.com/brysonsteck"
               ><i class="fa-brands fa-github fa-2xl"></i
             ></a>
             <a
-              class="col-2 text-light"
+              class="col-2"
               href="https://www.linkedin.com/in/brysonsteck/"
               ><i class="fa-brands fa-linkedin fa-2xl"></i
             ></a>
             <a
-              class="col-2 text-light"
+              class="col-2"
               href="https://play.google.com/store/apps/dev?id=8697902497679037997&hl=en_US&gl=US"
               ><i class="fa-brands fa-google-play fa-xl"></i
             ></a>
           </div>
+          <p class="disclaimer"><br />&copy; Bryson Steck 2021-2022</p>
+          <p class="disclaimer">Free and open source software licensed under the MIT License.</p>
         </div>
       </div>
     </div>
