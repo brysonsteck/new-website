@@ -17,6 +17,8 @@ import os
 from django.contrib import admin
 from django.urls import path, include
 from dotenv import load_dotenv
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
 
 load_dotenv()
 
@@ -24,4 +26,5 @@ urlpatterns = [
     path(os.getenv('ADMIN_URL'), admin.site.urls),
     path('', include('blog.urls')),
     path('projects/', include('projects.urls')),
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('blog/favicon.ico')))
 ]
