@@ -20,7 +20,7 @@
       type="text/css"
     />
     <script src="{% static 'blog/time.js' %}"></script>
-    <title>Bryson Steck</title>
+    <title>{{ project.title }} | Bryson Steck</title>
   </head>
 
   <body class="view website-background text-light">
@@ -29,6 +29,11 @@
         <div class="col-sm-9">
           <p>Welcome! It is currently <span id="time"></span> on
             <span id="date"></span></p>
+          <a href="../"
+            ><button type="button" class="mb-3 btn btn-blue">
+              <i class="fa-solid fa-arrow-left"></i>&ensp;Return to Projects Page
+            </button></a
+          >
           <div class="row">
             <div class="col-sm-2">
               {% with img_file="projects/images/"|add:project_img %}
@@ -72,7 +77,7 @@
             ></a>
           </div>
           <p class="disclaimer"><br />&copy; Bryson Steck 2021-2022</p>
-          <p class="disclaimer">Free and open source software licensed under the MIT License.</p>
+          <p class="disclaimer">Free and open source software under the MIT License.</p>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@
       type="text/css"
     />
     <script src="{% static 'blog/time.js' %}"></script>
-    <title>Blog Archive | Bryson Steck</title>
+    <title>Contact Me | Bryson Steck</title>
   </head>
 
   <body class="view website-background text-light">
@@ -29,26 +29,42 @@
         <div class="col-sm-9">
           <p>Welcome! It is currently <span id="time"></span> on
             <span id="date"></span></p>
+          <h1><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact Me</h1>
+          <hr />
 
-          <a href="../../"
-            ><button type="button" class="mb-3 btn btn-blue">
-              <i class="fa-solid fa-arrow-left"></i>&ensp;Return to Home Page
-            </button></a
-          >
-          {% if all_blogs %} {% for post in all_blogs %}
-          <a class="text-decoration-none" href="../post/{{ post.id }}/">
-            <div class="rounded-3 p-3 pb-1 mb-4 blog-background blog">
-              <h2>
-                {{ post.title }}
-              </h2>
-              <h5>Written by {{ post.author }} on {{ post.posted }}</h5>
-              <hr />
-              <p>{{ post.text_rendered | safe | truncatewords:100 }}</p>
+          <p>Want to contact me? You can do so in the following ways:</p>
+          <div class="row">
+            <div class="col-2">
+              <a href="mailto:brysonsteck@protonmail.com"
+                ><button type="button" class="mt-1 mb-1 btn btn-magenta w-100">
+                  <i class="fa-solid fa-envelope"></i>&ensp;Email
+                </button></a
+              >
             </div>
-          </a>
-          {% endfor %} {% else %}
-          <h1>There are no blog posts.</h1>
-          {% endif %}
+            <div class="col-8">
+              <p class="pt-2">Feel free to email me at <b>brysonsteck@protonmail.com</b>!</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <a href="https://www.linkedin.com/in/brysonsteck/"
+                ><button type="button" class="mt-1 mb-1 btn btn-blue w-100">
+                  <i class="fa-brands fa-linkedin"></i>&ensp;LinkedIn
+                </button></a
+              >
+            </div>
+            <div class="col-8">
+              <p class="pt-2"><b>I am currently employed full-time for the summer. </b>However, I am open to all options if you wish to send me a message.</p>
+              <p>I graduate in Spring 2023 and am currently interested in the following/similar positions:</p>
+              <ul>
+                <li>Software Engineer</li>
+                <li>Network Engineer</li>
+                <li>UNIX Server Administration</li>
+                <li>... and more!</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
         <div class="col-sm-3 p-4">
           <img
