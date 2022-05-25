@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="{% static 'projects/main.css' %}"
+      href="{% static 'blog/main.css' %}"
       type="text/css"
     />
     <link
@@ -20,15 +20,22 @@
       href="{% static 'fontawesomefree/css/all.css' %}"
       type="text/css"
     />
-    <script src="{% static 'blog/time.js' %}"></script>
-    <title>My Projects | Bryson Steck</title>
+    <title>ERROR 404 | Bryson Steck</title>
   </head>
 
   <body class="view website-background text-light">
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-9">
-          <h1>404</h1>
+          <a href="/"
+            ><button type="button" class="mb-3 btn btn-magenta">
+              <i class="fa-solid fa-arrow-left"></i>&ensp;Return to Safety 
+            </button></a
+          >
+          <h1><code class="error">404</code> Not Found</h1>
+          <p>Hold up! I don't know what you're looking for or if you did something by accident, but I don't have what you asked for.</p>
+          <p>Maybe go back and browse the web server like a normal person. :)</p>
+          <p>... or are you a person? Stupid web crawlers.</p>
         </div>
         <div class="col-lg-3 p-4">
           <img class="rounded-circle mx-auto d-block img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
