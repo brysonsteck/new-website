@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       rel="stylesheet"
       href="{% static 'blog/bootstrap.css' %}"
@@ -26,7 +27,7 @@
   <body class="view website-background text-light">
     <div class="container mt-5">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
           <p>Welcome! It is currently <span id="time"></span> on
             <span id="date"></span></p>
           <h1><i class="fa-solid fa-envelope-circle-check"></i>&ensp;Contact Me</h1>
@@ -34,26 +35,26 @@
 
           <p>Want to contact me? You can do so in the following ways:</p>
           <div class="row">
-            <div class="col-2">
+            <div class="col-3">
               <a href="mailto:brysonsteck@protonmail.com"
                 ><button type="button" class="mt-1 mb-1 btn btn-magenta w-100">
                   <i class="fa-solid fa-envelope"></i>&ensp;Email
                 </button></a
               >
             </div>
-            <div class="col-8">
+            <div class="col-9">
               <p class="pt-2">Feel free to email me at <b>brysonsteck@protonmail.com</b>!</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-2">
+            <div class="col-3">
               <a href="https://www.linkedin.com/in/brysonsteck/"
                 ><button type="button" class="mt-1 mb-1 btn btn-blue w-100">
                   <i class="fa-brands fa-linkedin"></i>&ensp;LinkedIn
                 </button></a
               >
             </div>
-            <div class="col-8">
+            <div class="col-9">
               <p class="pt-2"><b>I am currently employed full-time for the summer. </b>However, I am open to all options if you wish to send me a message.</p>
               <p>I graduate in Spring 2023 and am currently interested in the following/similar positions:</p>
               <ul>
@@ -66,9 +67,9 @@
           </div>
 
         </div>
-        <div class="col-sm-3 p-4">
+        <div class="col-lg-3 p-4">
           <img
-            class="rounded-circle img-fluid img-circle"
+            class="rounded-circle mx-auto d-block img-fluid img-circle"
             src="{% static 'blog/bryson.jpg' %}"
           />
           <h4><br />Bryson Steck</h4>

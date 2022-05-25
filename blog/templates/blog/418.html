@@ -20,7 +20,6 @@
       href="{% static 'fontawesomefree/css/all.css' %}"
       type="text/css"
     />
-    <script src="{% static 'blog/time.js' %}"></script>
     <title>My Projects | Bryson Steck</title>
   </head>
 
@@ -28,34 +27,14 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-9">
-          <p>Welcome! It is currently <span id="time"></span> on
-            <span id="date"></span></p>
-          <h1><i class="fa-solid fa-check"></i>&ensp;Current Projects</h1>
-          <p>Below are projects I currently work on in my free time.</p>
-          <div class="row">
-          {% if projects %} {% for project in projects %} {% if project.current %}
-            <div class="col-lg-6">
-              <a class="text-decoration-none" href="/projects/{{ project.title }}/">
-              <div class="rounded-3 p-3 pb-1 mb-4 project-background project">
-                <h2>{{ project.title }}</h2>
-                <p>{{ project.overview }}</p>
-              </div>
-              </a>
-            </div>
-          {% endif %} {% endfor %} {% endif %}
-          </div>
-          <h1><i class="fa-solid fa-power-off"></i>&ensp;Past Projects</h1>
-          <p>Below are projects I have worked on in the past and no longer maintain for various reasons. (Reasons are provided in each project.)</p>
-          {% if projects %} {% for project in projects %} {% if not project.current %}
-            <div class="col-lg-6">
-              <a class="text-decoration-none" href="/projects/{{ project.title }}/">
-              <div class="rounded-3 p-3 pb-1 mb-4 project-background project">
-                <h2>{{ project.title }}</h2>
-                <p>{{ project.overview }}</p>
-              </div>
-              </a>
-            </div>
-          {% endif %} {% endfor %} {% endif %}
+          <a href="/"
+            ><button type="button" class="mb-3 btn btn-magenta">
+              <i class="fa-solid fa-arrow-left"></i>&ensp;Return to Safety 
+            </button></a
+          >
+          <h1><code class="error">418</code> I'm a teapot</h1>
+          <img src="{% static 'blog/teapot.jpg' %}" alt="Literally just an image of a teapot">
+          <p>You got what you asked for.</p>
         </div>
         <div class="col-lg-3 p-4">
           <img class="rounded-circle mx-auto d-block img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">

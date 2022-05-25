@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       rel="stylesheet"
       href="{% static 'blog/bootstrap.css' %}"
@@ -26,7 +27,7 @@
   <body class="view website-background text-light">
     <div class="container mt-5">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
           <p>Welcome! It is currently <span id="time"></span> on
             <span id="date"></span></p>
           <a href="../"
@@ -35,7 +36,7 @@
             </button></a
           >
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-lg-2">
               {% with img_file="projects/images/"|add:project_img %}
               <img
                 src="{% static img_file %}"
@@ -44,7 +45,7 @@
               />
               {% endwith %}
             </div>
-            <div class="col-sm-10">
+            <div class="col-lg-10">
               <h1>{{ project.title }}</h1>
               <p>{{ project.overview }}<p>
             </div>
@@ -54,8 +55,8 @@
             {{ project.text_rendered | safe }}
           </p>
         </div>
-        <div class="col-sm-3 p-4">
-          <img class="rounded-circle img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
+        <div class="col-lg-3 p-4">
+          <img class="rounded-circle mx-auto d-block img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
           <h4><br />Bryson Steck</h4>
           <a href="/"><button type="button" class="mt-1 mb-1 btn btn-blue w-100"><i class="fa-solid fa-address-book"></i>&ensp;Blog</button></a>
           <a href="/about"><button type="button" class="mt-1 mb-1 btn btn-green w-100"><i class="fa-solid fa-user"></i>&ensp;About Me</button></a>

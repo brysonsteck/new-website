@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       rel="stylesheet"
       href="{% static 'blog/bootstrap.css' %}"
@@ -26,7 +27,7 @@
   <body class="view website-background text-light">
     <div class="container mt-5">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
           <p>Welcome! It is currently <span id="time"></span> on
             <span id="date"></span></p>
 
@@ -50,9 +51,9 @@
           <h1>There are no blog posts.</h1>
           {% endif %}
         </div>
-        <div class="col-sm-3 p-4">
+        <div class="col-lg-3 p-4">
           <img
-            class="rounded-circle img-fluid img-circle"
+            class="rounded-circle mx-auto d-block img-fluid img-circle"
             src="{% static 'blog/bryson.jpg' %}"
           />
           <h4><br />Bryson Steck</h4>

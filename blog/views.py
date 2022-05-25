@@ -37,7 +37,10 @@ def contact(request):
 
 def teapot(request):
     # return http code 418
-    return HttpResponse('<h1>I\'m a teapot</h1>', status=418)
+    return render(request, 'blog/418.html', status=418)
 
 def handler404(request, exception):
     return render(request, 'blog/404.html', {'exception': exception}, status=404)
+
+#def handler500(request, exception):
+#    return render(request, 'blog/500.html', {'exception': exception}, status=500)
