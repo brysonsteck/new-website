@@ -36,7 +36,7 @@
             </button></a
           >
           <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 text-center">
               {% with img_file="projects/images/"|add:project_img %}
               <img
                 src="{% static img_file %}"
@@ -45,7 +45,7 @@
               />
               {% endwith %}
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 mt-2">
               <h1>{{ project.title }}</h1>
               <p>{{ project.overview }}<p>
             </div>

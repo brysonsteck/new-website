@@ -6,7 +6,7 @@ function updateTime(){
   var hours = date.getHours()
   var minutes = date.getMinutes()
   var seconds = date.getSeconds()
-  var d_str = weekdayNames[date.getDay()] + ", " + monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear() + ", MST.";
+  var d_str = weekdayNames[date.getDay()] + ", " + monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear() + ".";
 
   var old_hours = hours;
   if (hours > 12) {

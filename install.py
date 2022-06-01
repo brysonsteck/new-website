@@ -17,6 +17,6 @@ if __name__ == "__main__":
   install("fontawesomefree")
   install("django-markdownfield")
   shutil.copy(".env.example", ".env")
-  input("\n\nIMPORTANT\nPlease make sure you change the secret key environment variable inside the newly created .env file if you are planning on using this during production. Press [ENTER] to continue the migration, otherwise press ^C now.\n")
+  input("\n\nIMPORTANT\nDon't forget to change the secret key environment variable inside the newly created .env file if you are planning on using this during production. Press [ENTER] to continue the migration with the key that is already in the .env.example file. \n")
   print("Migrating database...")
   subprocess.check_call([sys.executable, "manage.py", "migrate"])
