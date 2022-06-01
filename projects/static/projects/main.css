@@ -44,6 +44,10 @@ code {
   color: #ebdbb2;
 }
 
+.project img {
+  max-width: 100%;
+}
+
 .project p {
   color: #a89984;
 }

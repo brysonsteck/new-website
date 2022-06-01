@@ -51,9 +51,11 @@
             </div>
           </div>
           <hr />
-          <p>
-            {{ project.text_rendered | safe }}
-          </p>
+          <div class="project">
+            <p>
+              {{ project.text_rendered | safe }}
+            </p>
+          </div>
         </div>
         <div class="col-lg-3 p-4">
           <img class="rounded-circle mx-auto d-block img-fluid img-circle" src="{% static 'blog/bryson.jpg' %}">
